@@ -5,21 +5,18 @@
         = current_user.name
 
       %ul.side__header__box__menu
-        = link_to "#" do
+        = link_to new_group_path do
           %li.side__header__box__menu__list
-            = icon('fas', 'edit')
+            = icon('fas', 'edit', class:'icon')
         = link_to edit_user_path(current_user) do
           %li.side__header__box__menu__list
             = icon('fas', 'cog', class: 'icon')
 
   .groups
-    .group
-      %p.group__name
-        techcamp
-      %p.group__message
-        まだメッセージはありません
-    .group
-      %p.group__name
-        dan
-      %p.group__message
-        一つの光が宇宙に飛んでいく
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#', class: 'group' do
+          %p.group__name
+            = group.name
+          %p.group__message
+            まだメッセージはありません
