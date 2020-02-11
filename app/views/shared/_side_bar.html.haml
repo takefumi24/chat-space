@@ -5,17 +5,17 @@
         = current_user.name
 
       %ul.side__header__box__menu
-        = link_to new_group_path do
-          %li.side__header__box__menu__list
+        %li.side__header__box__menu__list
+          = link_to new_group_path do
             = icon('fas', 'edit', class:'icon')
-        = link_to edit_user_path(current_user) do
-          %li.side__header__box__menu__list
+        %li.side__header__box__menu__list
+          = link_to edit_user_path(current_user) do
             = icon('fas', 'cog', class: 'icon')
 
   .groups
     - current_user.groups.each do |group|
       .group
-        = link_to '#', class: 'group' do
+        = link_to group_messages_path(group), class: 'group' do
           %p.group__name
             = group.name
           %p.group__message
