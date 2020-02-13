@@ -15,21 +15,7 @@
 
   .messages
     = render @messages
-    .messages__message
-      .messages__message__upper__info
-        %p.messages__message__upper__info__talker
-          大羽
-        %p.messages__message__upper__info__date
-          2020/02/08
-      %p.messages__message__text
-        こんにちは！
-      .messages__message__upper__info
-        %p.messages__message__upper__info__talker
-          ダン
-        %p.messages__message__upper__info__date
-          2020/02/09
-      %p.messages__message__text
-        明けの明星に一つの光が宇宙に向かって飛んでいく
+
   .form
     = form_for [@group, @message] do |f|
       = f.text_field :content, class: "input-box__text", placeholder: 'type a message'
