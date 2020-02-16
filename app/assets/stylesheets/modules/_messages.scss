@@ -12,14 +12,12 @@
   height: 100vh;
 
   &__header {
-    background-color: #253141;
     height: 100px;
     display: flex;
     align-items: center;
     padding: 0 20px;
 
     &__box {
-      background-color: #333333 ;
       width: 100%;
       display: flex;
       justify-content: space-between;
